@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 40 45% 96%;
+    --foreground: 30 25% 18%;
+    --card: 38 50% 98%;
+    --card-foreground: 30 25% 18%;
+    --popover: 38 50% 98%;
+    --popover-foreground: 30 25% 18%;
+    --primary: 24 85% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 174 42% 85%;
+    --secondary-foreground: 174 50% 22%;
+    --muted: 35 30% 92%;
+    --muted-foreground: 30 12% 48%;
+    --accent: 174 38% 78%;
+    --accent-foreground: 174 50% 18%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 30% 89%;
+    --input: 35 30% 89%;
+    --ring: 24 85% 56%;
+    --chart-1: 24 85% 56%;
+    --chart-2: 174 42% 50%;
+    --chart-3: 35 60% 50%;
+    --chart-4: 200 50% 55%;
+    --chart-5: 15 70% 60%;
+    --radius: 1rem;
+
+    --ai-bubble: 174 30% 94%;
+    --ai-bubble-foreground: 174 30% 18%;
+    --user-bubble: 24 80% 58%;
+    --user-bubble-foreground: 0 0% 100%;
+
+    --warm-glow: 40 100% 95%;
+    --teal-soft: 174 35% 90%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
