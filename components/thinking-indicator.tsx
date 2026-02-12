@@ -21,18 +21,18 @@ export function ThinkingIndicator() {
       </div>
 
       {/* Dots */}
-      <div className="bg-ai-bubble border border-accent/20 px-5 py-3.5 rounded-2xl rounded-bl-lg shadow-sm">
+      <div className="bg-ai-bubble border border-border/30 px-5 py-3.5 rounded-2xl rounded-bl-lg shadow-sm">
         <div className="flex items-center gap-1.5" aria-label="Düşünüyor...">
           <span
-            className="w-2.5 h-2.5 rounded-full bg-accent-foreground/40 animate-thinking-dot"
+            className="w-2.5 h-2.5 rounded-full bg-primary/40 animate-thinking-dot"
             style={{ animationDelay: '0s' }}
           />
           <span
-            className="w-2.5 h-2.5 rounded-full bg-accent-foreground/40 animate-thinking-dot"
+            className="w-2.5 h-2.5 rounded-full bg-primary/40 animate-thinking-dot"
             style={{ animationDelay: '0.16s' }}
           />
           <span
-            className="w-2.5 h-2.5 rounded-full bg-accent-foreground/40 animate-thinking-dot"
+            className="w-2.5 h-2.5 rounded-full bg-primary/40 animate-thinking-dot"
             style={{ animationDelay: '0.32s' }}
           />
         </div>

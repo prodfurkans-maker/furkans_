@@ -54,7 +54,7 @@ export function MessageBubble({ message }: { message: UIMessage }) {
 
       {/* User avatar */}
       {isUser && (
-        <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-primary/15 flex items-center justify-center mt-1">
+        <div className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/15 flex items-center justify-center mt-1">
           <span className="text-sm font-bold text-primary" aria-hidden="true">
             {'Ben'}
           </span>
