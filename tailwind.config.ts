@@ -61,6 +61,8 @@ const config: Config = {
         },
         'warm-glow': 'hsl(var(--warm-glow))',
         'teal-soft': 'hsl(var(--teal-soft))',
+        'lavender-soft': 'hsl(var(--lavender-soft))',
+        'peach-soft': 'hsl(var(--peach-soft))',
         sidebar: {
           DEFAULT: 'hsl(var(--sidebar-background))',
           foreground: 'hsl(var(--sidebar-foreground))',
