@@ -6,10 +6,6 @@ import {
 } from 'ai'
 import { createGroq } from '@ai-sdk/groq'
 
-const groq = createGroq({
-  apiKey: process.env.GROQ_API_KEY,
-})
-
 export const maxDuration = 30
 
 const systemPrompt = `Sen "Düşünen Yapay Zeka" adında, çocuklara düşünmeyi öğreten bir yapay zekasın.
@@ -41,6 +37,10 @@ Türkçe cevap ver. Kısa ve öz ol. Arkadaş canlısı ve sıcak ol.`
 
 export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json()
+
+  const groq = createGroq({
+    apiKey: process.env.GROQ_API_KEY,
+  })
 
   const result = streamText({
     model: groq('llama-3.3-70b-versatile'),
