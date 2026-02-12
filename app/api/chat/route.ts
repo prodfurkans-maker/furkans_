@@ -4,7 +4,6 @@ import {
   streamText,
   UIMessage,
 } from 'ai'
-import { createGroq } from '@ai-sdk/groq'
 
 export const maxDuration = 30
 
@@ -66,15 +65,8 @@ Türkçe cevap ver. Her zaman destekleyici, meraklı ve ilham verici ol.`
 export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json()
 
-  console.log("[v0] GROQ_API_KEY exists:", !!process.env.GROQ_API_KEY)
-  console.log("[v0] GROQ_API_KEY length:", process.env.GROQ_API_KEY?.length)
-
-  const groq = createGroq({
-    apiKey: process.env.GROQ_API_KEY!,
-  })
-
   const result = streamText({
-    model: groq('llama-3.3-70b-versatile'),
+    model: 'groq/llama-3.3-70b-versatile',
     system: systemPrompt,
     messages: await convertToModelMessages(messages),
     abortSignal: req.signal,
